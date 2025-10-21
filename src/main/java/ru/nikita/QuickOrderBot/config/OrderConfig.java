@@ -1,9 +1,7 @@
 package ru.nikita.QuickOrderBot.config;
 
-import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 import ru.nikita.QuickOrderBot.model.Order;
 
 import java.util.ArrayList;
