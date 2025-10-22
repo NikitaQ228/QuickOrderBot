@@ -2,7 +2,7 @@ package ru.nikita.QuickOrderBot.services;
 
 import ru.nikita.QuickOrderBot.model.Order;
 import ru.nikita.QuickOrderBot.model.OrderItem;
-import ru.nikita.QuickOrderBot.model.OrderStatus;
+import ru.nikita.QuickOrderBot.enums.OrderStatus;
 
 /**
  * Интерфейс сервиса для управления заказами.

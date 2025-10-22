@@ -3,7 +3,7 @@ package ru.nikita.QuickOrderBot.repository.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.nikita.QuickOrderBot.model.Order;
-import ru.nikita.QuickOrderBot.model.OrderStatus;
+import ru.nikita.QuickOrderBot.enums.OrderStatus;
 import ru.nikita.QuickOrderBot.repository.CrudRepository;
 
 import java.time.LocalDateTime;
@@ -13,7 +13,7 @@ import java.util.List;
  * Репозиторий для управления заказами.
  * Реализует операции CRUD над сущностями Order.
  */
-@Component
+@Component("OrderRepositoryForList")
 public class OrderRepository implements CrudRepository<Order, Long> {
     private final List<Order> orderContainer;
 
