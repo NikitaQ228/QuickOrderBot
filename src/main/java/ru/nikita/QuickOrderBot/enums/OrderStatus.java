@@ -1,4 +1,4 @@
-package ru.nikita.QuickOrderBot.model;
+package ru.nikita.QuickOrderBot.enums;
 
 /**
  * Перечисление, представляющее возможные статусы заказа.

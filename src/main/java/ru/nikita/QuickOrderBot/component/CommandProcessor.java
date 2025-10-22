@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.nikita.QuickOrderBot.model.Order;
 import ru.nikita.QuickOrderBot.model.OrderItem;
-import ru.nikita.QuickOrderBot.model.OrderStatus;
+import ru.nikita.QuickOrderBot.enums.OrderStatus;
 import ru.nikita.QuickOrderBot.services.OrderService;
 
 /**
