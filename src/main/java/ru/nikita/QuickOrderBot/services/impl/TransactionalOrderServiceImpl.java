@@ -1,7 +1,6 @@
 package ru.nikita.QuickOrderBot.services.impl;
 
 import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.nikita.QuickOrderBot.entity.Order;
 import ru.nikita.QuickOrderBot.entity.OrderItem;

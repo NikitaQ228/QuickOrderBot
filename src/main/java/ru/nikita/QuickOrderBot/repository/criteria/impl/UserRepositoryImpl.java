@@ -1,4 +1,4 @@
-package ru.nikita.QuickOrderBot.repository.criteria;
+package ru.nikita.QuickOrderBot.repository.criteria.impl;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.criteria.CriteriaBuilder;
@@ -7,6 +7,7 @@ import jakarta.persistence.criteria.Root;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import ru.nikita.QuickOrderBot.entity.User;
+import ru.nikita.QuickOrderBot.repository.criteria.UserRepositoryCustom;
 
 import java.util.List;
 
