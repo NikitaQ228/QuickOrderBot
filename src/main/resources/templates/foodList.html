@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Список еды</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        thead {
+            background-color: #4CAF50;
+            color: white;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tbody tr:hover {
+            background-color: #e0f7fa;
+        }
+    </style>
+</head>
+<body>
+<h1>Список еды</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Цена</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="food : ${foods}">
+        <td th:text="${food.id}"></td>
+        <td th:text="${food.name}"></td>
+        <td th:text="${food.description}"></td>
+        <td th:text="${food.price}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

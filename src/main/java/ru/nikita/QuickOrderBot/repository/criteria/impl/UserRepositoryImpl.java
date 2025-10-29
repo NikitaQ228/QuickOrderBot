@@ -5,12 +5,14 @@ import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 import ru.nikita.QuickOrderBot.entity.User;
 import ru.nikita.QuickOrderBot.repository.criteria.UserRepositoryCustom;
 
 import java.util.List;
 
+@RepositoryRestResource
 @Repository
 public class UserRepositoryImpl implements UserRepositoryCustom {
 
