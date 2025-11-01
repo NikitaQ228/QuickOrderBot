@@ -12,8 +12,12 @@ import java.util.List;
 @Controller
 public class FoodControllerView {
 
+    private final FoodRepository foodRepository;
+
     @Autowired
-    private FoodRepository foodRepository;
+    public FoodControllerView(FoodRepository foodRepository) {
+        this.foodRepository = foodRepository;
+    }
 
     @GetMapping("/view/foods")
     public String foodList(Model model) {

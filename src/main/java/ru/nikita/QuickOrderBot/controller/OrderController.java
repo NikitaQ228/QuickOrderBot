@@ -15,8 +15,12 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/order")
 public class OrderController {
 
+    private final OrderRepository orderRepository;
+
     @Autowired
-    private OrderRepository orderRepository;
+    public OrderController(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
 
     @GetMapping("/search/{email}")
     public List<OrderDTO> searchByEmailUser(@PathVariable String email) {
