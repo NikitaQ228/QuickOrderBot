@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="ru">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>Список еды</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f9f9f9;
             margin: 20px;
+            position: relative; /* Нужно для абсолютного позиционирования кнопки относительно body */
         }
         h1 {
             text-align: center;
@@ -34,10 +35,34 @@
         tbody tr:hover {
             background-color: #e0f7fa;
         }
+        .logout-form {
+            position: absolute; /* Абсолютное позиционирование */
+            top: 20px;          /* c отступом сверху */
+            right: 20px;        /* с отступом справа */
+        }
+        .logout-form input[type="submit"] {
+            background-color: #f44336;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .logout-form input[type="submit"]:hover {
+            background-color: #d32f2f;
+        }
     </style>
 </head>
 <body>
 <h1>Список еды</h1>
+
+<!-- Форма выхода -->
+<form th:action="@{/logout}" method="post" class="logout-form">
+    <input type="submit" value="Выйти"/>
+</form>
+
 <table>
     <thead>
     <tr>
@@ -56,5 +81,6 @@
     </tr>
     </tbody>
 </table>
+<h3><a href="/swagger-ui/index.html">Только для админа!!!</a></h3>
 </body>
 </html>

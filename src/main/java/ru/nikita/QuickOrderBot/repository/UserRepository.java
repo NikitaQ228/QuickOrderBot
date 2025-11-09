@@ -6,9 +6,12 @@ import org.springframework.stereotype.Repository;
 import ru.nikita.QuickOrderBot.entity.User;
 
 import java.util.List;
+import java.util.Optional;
 
 @RepositoryRestResource
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     List<User> findByFirstNameAndLastName(String firstName, String lastName);
+
+    Optional<User> findByEmail(String email);
 }
