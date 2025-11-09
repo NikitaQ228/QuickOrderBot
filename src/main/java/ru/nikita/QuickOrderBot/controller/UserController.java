@@ -1,7 +1,10 @@
 package ru.nikita.QuickOrderBot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import ru.nikita.QuickOrderBot.dto.UserDTO;
 import ru.nikita.QuickOrderBot.services.impl.UserServiceImpl;
 
@@ -20,12 +23,12 @@ public class UserController {
     }
 
     @GetMapping("/search/name")
-    public List<UserDTO> searchUser(@RequestParam String firstName, @RequestParam String lastName) {
+    public List<UserDTO> searchByName(@RequestParam String firstName, @RequestParam String lastName) {
         return userService.searchByName(firstName, lastName);
     }
 
     @GetMapping("/search/email")
-    public Optional<UserDTO> searchUser(@RequestParam String email) {
+    public Optional<UserDTO> searchByEmail(@RequestParam String email) {
         return userService.searchByEmail(email);
     }
 

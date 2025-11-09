@@ -8,6 +8,8 @@ import java.util.Optional;
 
 public interface UserService {
     List<UserDTO> searchByName(String firstName, String lastName);
+
     Optional<UserDTO> searchByEmail(String email);
+
     void addUser(UserRegistrationDTO userReg);
 }

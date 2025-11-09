@@ -24,13 +24,11 @@ public class RegistrationController {
     }
 
     @PostMapping("/registration")
-    public String adduser(UserRegistrationDTO userReg, Model model)
-    {
+    public String addUser(UserRegistrationDTO userReg, Model model) {
         try {
             userService.addUser(userReg);
             return "redirect:/login";
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             model.addAttribute("message", "User exists");
             return "registration";
         }
