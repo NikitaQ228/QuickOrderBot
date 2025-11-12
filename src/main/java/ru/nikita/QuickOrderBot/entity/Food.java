@@ -25,4 +25,12 @@ public class Food {
     @JoinColumn(name = "store_id")
     private FoodStore foodStore;
 
+    @Override
+    public String toString() {
+        return "Food{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
