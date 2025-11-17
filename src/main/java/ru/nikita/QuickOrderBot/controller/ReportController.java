@@ -18,7 +18,7 @@ public class ReportController {
         this.reportService = reportService;
     }
 
-    @PostMapping("/create")
+    @PostMapping
     public ResponseEntity<Long> createAndGenerateReport() {
         Long reportId = reportService.createReport();
         reportService.generateReport(reportId);
